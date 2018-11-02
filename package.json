@@ -5,12 +5,19 @@
     "compile": "yarn compile-js && yarn compile-less && yarn compile-uikit",
     "compile-uikit": "cd ./assets/uikit && yarn compile-less && yarn compile-rtl && yarn compile-js uikit && yarn compile-js tests",
     "compile-js": "./node_modules/.bin/webpack -p",
-    "compile-less": "make-dir css && lessc less/theme.less > css/theme.css --relative-urls --rootpath=../less/ -x"
+    "compile-less": "make-dir css && lessc less/theme.less > css/theme.css --relative-urls --rootpath=../less/ -x",
+    "dev:w": "webpack -w"
   },
   "devDependencies": {
     "buble-loader": "^0.4.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
     "less": "^2.7.2",
     "make-dir-cli": "^1.0.0",
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0",
     "symlink-dir": "^1.1.2",
     "uikit": "^3.0.0-rc.12",
     "uniqid": "^5.0.3",

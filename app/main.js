@@ -4,7 +4,7 @@ import App from './app.vue';
 import Navbar from './navbar.vue';
 import analytics from './analytics';
 import navigation from '../docs/app/navigation.json';
-
+import '../scss/theme.scss';
 // Pages
 import IndexPage from './pages/index.vue';
 import ProPage from './pages/pro.vue';

@@ -73,7 +73,7 @@ module.exports = [{
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'assets/'
+                        outputPath: 'assets/fonts/'
                     }
                 }]
             },
@@ -90,7 +90,8 @@ module.exports = [{
         // Extract CSS from javascript file and put it into another CSS file in dist folder
         new ExtractTextPlugin({
             // define where to save the file
-            filename: 'assets/css/[name].bundle.css',
+            //filename: 'assets/css/[name].bundle.css',
+            filename: 'css/theme.css',
             allChunks: true
         }),
 
@@ -170,7 +171,7 @@ module.exports = [{
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'assets/'
+                        outputPath: 'assets/fonts/'
                     }
                 }]
             },
@@ -187,7 +188,7 @@ module.exports = [{
         // Extract CSS from javascript file and put it into another CSS file in dist folder
         new ExtractTextPlugin({
             // define where to save the file
-            filename: 'assets/css/[name].bundle.css',
+            filename: 'css/theme.css',
             allChunks: true
         }),
 
@@ -207,26 +208,3 @@ module.exports = [{
     }, */
 
 }]
-
-/*
-if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true
-        })
-    ])
-}
- */

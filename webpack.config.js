@@ -26,7 +26,9 @@ module.exports = [{
     },
     externals,
     resolve: {
-        extensions: ['.ts', '.js', '.tsx', '.jsx', '.vue', '.json']
+        extensions: ['.ts', '.js', '.tsx', '.jsx', '.vue', '.json'],
+        alias: { "uikit": path.join(__dirname, "node_modules/uikit") },
+        symlinks: true
     },
     resolveLoader: {
         modules: ["node_modules"] // This will resolve module path when using "npm link"
@@ -124,7 +126,9 @@ module.exports = [{
     },
     externals,
     resolve: {
-        extensions: ['.ts', '.js', '.tsx', '.jsx', '.vue', '.json']
+        extensions: ['.ts', '.js', '.tsx', '.jsx', '.vue', '.json'],
+        alias: { "uikit": path.join(__dirname, "node_modules/uikit") },
+        symlinks: true
     },
     resolveLoader: {
         modules: ["node_modules"] // This will resolve module path when using "npm link"
